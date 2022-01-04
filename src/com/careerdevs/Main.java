@@ -6,6 +6,7 @@ public class Main {
         String firstName = "Keith";
         String lastName = "Benjamin";
         createFullName(firstName, lastName);
+        NameGenerator.generateFullName(firstName, lastName);
     }
 
     public static void createFullName(String firstName, String lastName) {
