@@ -66,14 +66,16 @@ public class Main {
         }
 
         //for each loop
+        // it is an enhanced for loop = . was introduced in JDK 1.5
         //for (type var : array)
         //{
         //    statements using var;
         //}
+        // the draw backs
         //For-each loops are not appropriate when you want to modify the array:
         // For-each also has some performance overhead over simple iteration:
         // For-each cannot process two decision making statements at once
-        // For-each only iterates forward over the array in single steps
+        // For-each only iterates forward over the array in single steps -- sequential only
         // For-each loops do not keep track of index. So we can not obtain array index using For-Each loop
 
     }
