@@ -7,7 +7,7 @@ public class People {
 }
 
 //static implementation
-//People.firstNames
+//People.firstNames    <Classname>.<static_method_name>
 
 //non-static implementation
 // new People().firstNames
