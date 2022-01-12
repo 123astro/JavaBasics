@@ -1,5 +1,7 @@
 package com.careerdevs;
 
+import java.text.DecimalFormat;
+
 public class Car {
     private String make;
     private String model;
@@ -47,7 +49,9 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Make: " + getMake() + " Model: " + getModel() + " Mileage: " + getMileage() + " Gas left: " + getGasTankPercent();
+        DecimalFormat decFormat = new DecimalFormat("#%");
+        return "Make: " + getMake() + " Model: " + getModel() + " Mileage: " + getMileage() + " Gas left: " + decFormat.format(getGasTankPercent());
     }
+
 
 }

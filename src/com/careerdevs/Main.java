@@ -1,7 +1,6 @@
 package com.careerdevs;
 
-import jdk.swing.interop.SwingInterOpUtils;
-
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -62,8 +61,18 @@ public class Main {
         listOfCars.add(new Car("Mustang GT", "Ford", 30000, (float) .50));
         listOfCars.add(new Car("Hellcat", "Dodge", 100, (float) .90));
         for (Car car : listOfCars) {  // for in loop or for each loop
-            System.out.println("Car: " + car.getModel() + " Make: " + car.getMake() + " Mileage: " + car.getMileage() + " Gas left: " + car.getGasTankPercent());
+            DecimalFormat decFormat = new DecimalFormat("#%");
+            System.out.println("Car: " + car.getModel() + " Make: " + car.getMake() + " Mileage: " + car.getMileage() + " Gas left: " + decFormat.format(car.getGasTankPercent()));
         }
+
+        // Array
+        Car[] myCarArr = new Car[3];
+        myCarArr[0] = car1;
+        myCarArr[1] = car2;
+        myCarArr[2] = car3;
+
+        // Car[] myNewCarArr = new Car[] {car1, car2, car3};  another way
+
 
         //for each loop
         // it is an enhanced for loop = . was introduced in JDK 1.5
@@ -74,7 +83,7 @@ public class Main {
         // the draw backs
         //For-each loops are not appropriate when you want to modify the array:
         // For-each also has some performance overhead over simple iteration:
-        // For-each cannot process two decision making statements at once
+        // For-each cannot process two decision-making statements at once
         // For-each only iterates forward over the array in single steps -- sequential only
         // For-each loops do not keep track of index. So we can not obtain array index using For-Each loop
 
