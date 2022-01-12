@@ -46,8 +46,8 @@ public class Car {
     }
 
     @Override
-    public String toString(){
-        return "Make: " +  getMake() + " Model: " + getModel() + " Mileage: " + getMileage() + " Gas left: " + getGasTankPercent();
+    public String toString() {
+        return "Make: " + getMake() + " Model: " + getModel() + " Mileage: " + getMileage() + " Gas left: " + getGasTankPercent();
     }
 
 }
