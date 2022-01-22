@@ -47,9 +47,7 @@ public class Main {
     public static void simpleCalculator() {
         int inputNum1 = getUserIntInput("Enter first number to add");
         int inputNum2 = getUserIntInput("Enter second number to add");
-
         int sumTotal = sum(inputNum1, inputNum2);
-
         System.out.println("The sum of " + inputNum1 + " and " + inputNum2 + " is " + sumTotal + "\n");
     }
 
@@ -59,6 +57,7 @@ public class Main {
             System.out.println("Not a number. Enter a valid number");
             scanner.next();
         }
+        scanner.nextLine(); // used to clear out the input line -- not needed here but a reminder.
         return scanner.nextInt();
     }
 }
