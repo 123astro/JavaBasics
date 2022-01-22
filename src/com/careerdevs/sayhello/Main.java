@@ -1,8 +1,6 @@
 package com.careerdevs.sayhello;
 
 import com.careerdevs.NameGenerator;
-
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -13,6 +11,7 @@ public class Main {
         whatIsYourName("What is your first name");
         whatIsYourFullName("First prompt type your first name. Second prompt, type your last name");
         simpleCalculator();
+        userSignUp();
     }
 
     public static void whatIsYourName(String question) {
@@ -31,13 +30,13 @@ public class Main {
         String passWord = getUserInput("Enter a password");
         System.out.println("Thanks for signing up " + userName);
         if (passWord.length() < 5) {
-            System.out.println("Your password sucks!");
+            System.out.println("Your password isn't very good!");
         }
     }
 
     public static String getUserInput(String question) {
         System.out.print(question + "\nInput: ");
-        String input = scanner.nextLine();
+        String input = scanner.next();
         return input;
     }
 
@@ -56,22 +55,11 @@ public class Main {
 
     public static int getUserIntInput(String question) {
         System.out.println((question + "\nInt: "));
-        int input = 0;
-//        while (true) {
-//            try{
-//                input = scanner.nextInt();
-//                break;
-//            }
-//            catch (InputMismatchException e) {
-//                System.out.println("Please enter a valid number");
-//                scanner.nextLine();
-//            }
-//        }
-        return input;
-//        while (!scanner.hasNextInt()) {
-//            System.out.println("Please enter a number");
-//            scanner.nextInt();
-//        }
+        while (!scanner.hasNextInt()) {  // loop while scanner is not a number
+            System.out.println("Not a number. Enter a valid number");
+            scanner.next();
+        }
+        return scanner.nextInt();
     }
 }
 
