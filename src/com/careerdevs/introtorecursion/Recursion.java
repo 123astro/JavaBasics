@@ -17,7 +17,7 @@ public class Recursion {
        // sum(10);
         System.out.println("");
 
-        recursionSum(1);
+        recursionSum(12);
 
 
     }
@@ -49,10 +49,11 @@ public class Recursion {
         if (n < 0) {  // out of the recursion loop
             return -1;
         }
-        int sum = n * (n + 1)/2;
-        System.out.println(sum);
-        recursionSum( n -1 );
-        return sum;
+        if (n > 0) {
+            int sum = n * ( n + 1) / 2;
+            System.out.println(sum);
+            recursionSum(n - 1);
+        }
+            return 0;
     }
-
 }
