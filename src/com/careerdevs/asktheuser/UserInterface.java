@@ -5,7 +5,10 @@ import java.util.Scanner;
 public class UserInterface {
     public static Scanner scanner = new Scanner(System.in);
 
+
     public static void main(String[] args) {
+
+       // carType();
 
         System.out.println("What type of car do you have?");
         String carType = scanner.nextLine();
