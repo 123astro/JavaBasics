@@ -14,11 +14,11 @@ public class Recursion {
     public static void main(String[] args) {
         //countDown(1);
 
-       // sum(10);
+        // sum(10);
         System.out.println("");
 
         recursionSum(12);
-
+        countDownRecursive(10);
 
     }
 
@@ -27,6 +27,16 @@ public class Recursion {
         for (int i = num; i >= 0; i--)
             System.out.println(i);
     }
+
+    public static int countDownRecursive(int num) {
+        if (num < 0) {
+            return -1;
+        }
+        System.out.println(num);
+        countDownRecursive(num - 1);
+        return  -1;
+    }
+
 
     public static int sum(int n) {
         int num = 0;
