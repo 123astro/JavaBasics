@@ -8,9 +8,6 @@ public class Recursion {
 
      */
 
-//    private static int count = 1;
-//    private static int sum2 = 1;
-
     public static void main(String[] args) {
         //countDown(1);
 
@@ -18,6 +15,7 @@ public class Recursion {
         System.out.println("");
 
         recursionSum(12);
+        System.out.println(" ");
         countDownRecursive(10);
 
     }
