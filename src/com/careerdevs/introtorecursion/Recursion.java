@@ -45,7 +45,6 @@ public class Recursion {
 //    }
 
     public static int recursionSum(int n) {
-
         if (n < 0) {  // out of the recursion loop
             return -1;
         }
