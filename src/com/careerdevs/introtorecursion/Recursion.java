@@ -17,6 +17,7 @@ public class Recursion {
         recursionSum(12);
         System.out.println("");
         recursionSum(15);
+
     }
 
     public static void countDown(int num) {
@@ -33,6 +34,12 @@ public class Recursion {
         }
         return num;
     }
+
+//    public static int recursionSum2(int num){
+//        if(num !=  ){
+//            return num = i + num;
+//        }
+//    }
 }
 
 
