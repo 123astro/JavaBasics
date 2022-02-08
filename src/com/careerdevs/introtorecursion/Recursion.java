@@ -8,15 +8,17 @@ public class Recursion {
 
      */
 
+//    private static int count = 1;
+//    private static int sum2 = 1;
+
     public static void main(String[] args) {
-         //countDown(1);
+        //countDown(1);
+
+       // sum(10);
+        System.out.println("");
+
         recursionSum(1);
-        System.out.println("");
-        recursionSum(10);
-        System.out.println("");
-        recursionSum(12);
-        System.out.println("");
-        recursionSum(15);
+
 
     }
 
@@ -26,7 +28,7 @@ public class Recursion {
             System.out.println(i);
     }
 
-    public static int recursionSum(int n) {
+    public static int sum(int n) {
         int num = 0;
         for (int i = 1; i < n + 1; i++) {
             num = i + num;
@@ -35,12 +37,22 @@ public class Recursion {
         return num;
     }
 
+
 //    public static int recursionSum2(int num){
 //        if(num !=  ){
 //            return num = i + num;
 //        }
 //    }
+
+    public static int recursionSum(int n) {
+
+        if (n < 0) {  // out of the recursion loop
+            return -1;
+        }
+        int sum = n * (n + 1)/2;
+        System.out.println(sum);
+        recursionSum( n -1 );
+        return sum;
+    }
+
 }
-
-
-
